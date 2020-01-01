@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script>
+      var a = prompt("Enter your name.");             
+      var b = prompt("Enter your date of birth.");    
+      var c = prompt("Enter your birth month.");      
+      var d = prompt("Enter your birth year.");       
+      alert("Hello " + a + ", Good Evening");         
+
+      var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+      var now = new Date().getMonth();
+      var monthName = months[c];
+      var dob = new Date(months[c] + b + ", " + d);
+      alert("Your DOB is " + dob);  
+
+      var currentDate = new Date();                            
+      var msDiff = currentDate.getTime() - dob.getTime();
+      var sec = currentDate.getSeconds() - dob.getSeconds();
+      var mins = currentDate.getMinutes() - dob.getMinutes();
+      var hrs = currentDate.getHours() - dob.getHours();
+      var days = dob.getDay() - currentDate.getDay();
+      var months = (((msDiff / (1000 * 60 * 60 * 24) / 365) * 12) % 12);
+      var years = msDiff / (1000 * 60 * 60 * 24 * 365);
+      alert("You are "+ Math.round(years) + " Years " + Math.round(months) + " Months " + Math.round(days) + " Days " + Math.round(hrs) + " Hours " + Math.round(mins) + " Minutes " + Math.round(sec) + " Seconds old.");
+      var totalDays = msDiff / (1000 * 60 * 60 * 24);
+      alert("You are " + Math.round(totalDays) + " days old");
+
+      var nextYear = currentDate.getFullYear() + 1;                 
+      var nextBday = new Date(monthName + " " + b + ", " + nextYear);
+      var msDiffNext = nextBday.getTime() - currentDate.getTime();
+      var secNext = currentDate.getSeconds() - nextBday.getSeconds();
+      var minNext = currentDate.getMinutes() - nextBday.getMinutes();
+      var hrsNext = currentDate.getHours() - nextBday.getHours();
+      var daysNext = nextBday.getDay() - currentDate.getDay();
+      var monthsNext = (((msDiffNext / (1000 * 60 * 60 * 24) / 365) * 12) % 12);
+      var yearsNext = msDiffNext / (1000 * 60 * 60 * 24 * 365);
+      alert(Math.round(monthsNext) + " Months " + Math.round(daysNext) + " Days " + Math.round(hrsNext) + " Hours " + Math.round(minNext) + " Minutes " + Math.round(secNext) + " Seconds left in your next Birthday.");
+
+
+   </script>
+</head>
+</html>
