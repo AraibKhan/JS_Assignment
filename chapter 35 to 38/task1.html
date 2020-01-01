@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        var inputValue = prompt("Enter your course name");
+        var capitalizeValue = capitalizeFirstValue(inputValue);
+        alert(capitalizeValue);
+
+        function capitalizeFirstValue(inputValue){
+            var stringArray = inputValue.split(" ");
+            var capitalizeValue = " ";
+            var capitalValue, remainingValue, space=" ";
+            for(var i = 0;i < stringArray.length; i++){
+                capitalValue = stringArray[i].charAt(0).toUpperCase();
+                remainingValue = stringArray[i].slice(1);
+                capitalizeValue = capitalizeValue.concat(capitalValue, remainingValue, space);
+            }
+            return(capitalizeValue);
+        }
+    </script>
+
+</head>
+</html>

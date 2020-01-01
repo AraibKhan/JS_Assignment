@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        var inputNum = prompt("Enter a number for factorial");
+        var factorialNum = fact(inputNum);
+        alert(factorialNum);
+
+        function fact(inputNum){
+            var fact = 1;
+            while(inputNum !== 1){
+                fact = fact * inputNum--;
+            }
+            return fact;
+        }
+    </script>
+</head>
+</html>
