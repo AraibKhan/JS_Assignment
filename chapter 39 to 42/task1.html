@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script>
+        var course1 = prompt("Enter your course marks");
+        var course2 = prompt("Enter your course marks");
+        var course3 = prompt("Enter your course marks");
+        var course4 = prompt("Enter your course marks");
+        var course5 = prompt("Enter your course marks");
+
+
+        var totalMarks = 500;
+        var obtainedMarks = Number(course1) + Number(course2) + Number(course3) + Number(course4) + Number(course5);
+        var percentage = obtainedMarks * 100 / totalMarks;
+        alert(percentage);
+
+        switch(percentage){
+           case percentage <= 100 || percentage >= 80:
+           alert("Your grade is A+");
+           break;
+
+           case percentage <= 79 || percentage >= 70:
+           alert("Your grade is A");
+           break;
+
+           case percentage <= 69 || percentage >= 60:
+           alert("Your grade is B");
+           break;
+
+           case percentage <= 59 || percentage >= 50:
+           alert("Your grade is C");
+           break;
+
+           case percentage <= 49 || percentage >= 40:
+           alert("Your grade is D");
+           break;
+
+           case percentage <= 39 || percentage >= 30:
+           alert("Your grade is B");
+           break;
+
+           default:
+           alert("You are failed");
+        }  
+        
+   </script>
+</head>
+</html>
