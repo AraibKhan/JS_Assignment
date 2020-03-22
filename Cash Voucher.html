@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        do{
+            var a = Number(prompt("Enter voucher amount"));
+        }
+        while(a <= 0);
+        var c = 0;
+        do{
+            do{
+                var b = Number(prompt("Enter purchase amount"));
+            }while(b > a);
+            c = c + b;
+            a = a - b;
+            alert("Your remaining amount " + a);
+            alert("Your total purchases are of " + c);    
+        }
+        while(a != 0);
+        if(b == a){
+            c = c + b;
+            a = a - b;
+            alert("Your remaining amount " + a);
+            alert("Your total purchases are of " + c);   
+        }
+        if(b < 0){
+            alert("Your remaining amount " + a);
+            alert("Your total purchases are of " + c);
+        }
+
+      
+    </script>
+</head>
+</html>
