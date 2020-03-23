@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        var a = Number(prompt("Enter the year."));
+        var b = a % 4;
+        var c = a % 100;
+        var d = a % 400;
+        var e = "Not A Leap Year.";
+        if(b == 0){
+            e = "It Is A Leap Year.";
+            if(c == 0){
+                e = "Not A Leap Year.";
+                if(d == 0){
+                    e = "It Is A Leap Year.";
+                }
+            }
+        }
+        alert(e);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
