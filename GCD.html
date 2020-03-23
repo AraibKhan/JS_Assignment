@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        do{
+            var a = Number(prompt("Enter first number."));
+            var b = Number(prompt("Enter second number."));
+        }while(a <= 0 || b <= 0);
+        if(a < b){
+            var s = a;
+        }
+        else{
+            var s = b;
+        }
+        var c = 1;
+        do{
+            var d = a % c;
+            var e = b % c;
+            if(d == 0 && e == 0){
+                var f = c;
+            }
+            c = c + 1;
+        }while(c <= s);
+        alert("The Greatest Common Divisor is " + f);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
